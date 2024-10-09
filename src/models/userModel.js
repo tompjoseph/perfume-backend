@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    profileImg: {
+    profilepic: {
       type: String,
       default: "https://st4.depositphotos.com/3864435/27060/i/450/depositphotos_270605520-stock-photo-default-avatar-profile-icon-grey.jpg",
     },
