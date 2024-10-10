@@ -1,12 +1,10 @@
 import express from "express";
-import { userSignUp } from "../controllers/userController.js";
+import { userLogin, userSignUp } from "../controllers/userController.js";
 const router = express.Router()
 
 router.post("/user-sign-up", userSignUp)
 
-router.post("/user-login", (req, res, next) => {
-    res.send('User Logged In')
-})
+router.post("/user-login", userLogin)
 
 router.put("/user-profile-update", (req, res, next) => {
     res.send('User Profile Updated')

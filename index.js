@@ -1,6 +1,7 @@
 import express from "express";
 import { connectDB } from "./config/db.js";
 import { apiRouter } from "./src/routes/index.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 const port = 3000;
@@ -12,6 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.json())
+app.use(cookieParser())
 
 app.use('/api', apiRouter)
 
